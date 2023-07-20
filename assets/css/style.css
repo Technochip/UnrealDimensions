@@ -1,0 +1,996 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+html{
+  scroll-behavior: smooth;
+  background-color: #1b2743;
+  font-family: 'Orbitron', sans-serif;
+
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    /* font-family: 'segoe ui'; */
+  }
+  
+  .nav {
+    height: 50px;
+    padding: ;
+    width: 100%;
+    /* background-color: #4d4d4d; */
+    position: fixed;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    /* color: #efefef; */
+    color: #cc1bc6;
+    border: 1px solid  rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    scale: 1.1;
+
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background-color: #cc1bc6;
+      border-radius: 50%;
+
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      /* background-color: rgba(0, 0, 0, 0.3); */
+      background-color: #cc1bc6;
+      border-radius: 50%;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
+
+
+
+  .gif-container {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    overflow: hidden;
+  }
+  
+  .gif-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .gif-container .hover-image {
+    opacity: 0;
+  }
+  
+  .gif-container:hover .hover-image {
+    opacity: 1;
+  }
+
+.home {
+    height: 100vh; 
+    width: 100%;
+    /* margin-top: 6pc; */
+    /* margin-bottom: 12pc; */
+    background-color: #1b2743;
+    background-image: url(/VR2.gif);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    padding-top: 10%;
+    padding-top: 0%;
+    align-items: end;
+    justify-content: space-around;
+}
+  .header h1 {
+    margin:20%;
+    font-size: 90px;
+    font-weight: 600;
+    color: transparent;
+    background: url(/images/image4.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: moving 10s linear infinite;
+    padding-left: 0;
+    padding-right: 900m;
+  }
+  
+  @keyframes moving {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 100%;
+    }
+  }
+
+  p {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    color: violet;
+    border: 5cm solid ;
+    border-style:hidden;
+    letter-spacing: 1px;
+    margin-top: 3pc;
+    margin-bottom: 3pc;
+  }   
+
+
+  .slider {
+    /* padding: 0; */
+    /* width: 100%; */
+    height: 50vh;
+}
+
+.slider-container{
+    /* display: flex; */
+    justify-content: center;
+    /* border: 2px solid white; */
+    width: 90%;
+    margin: auto;
+  }
+.slider {
+    /* padding-right: 50%;
+    padding-left: 50%;*/
+    /* background-color: red;*/
+   /* width: 1200px;  */
+   padding: 0px 10px;
+   width: 70%;
+   margin: auto;
+    /* height: 250px; */
+    /* margin: 12px ; */
+    /* background: url(/images/image1.jpg); */
+    animation: slide 10s infinite;
+    background-repeat: no-repeat;
+  }
+  
+  @keyframes slide {
+    20%{
+      background: url(/images/image1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+    }
+    40%{
+      background: url(/images/image2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+              
+    }
+    60%{
+        background: url(/images/image3.jpg);
+
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+            
+    }
+    80%{
+      background: url(/images/image4.jpg);
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+                
+    }
+    
+    100%{
+      background: url(/images/image5.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      
+
+              
+    }
+  }
+
+  .slider1 {
+    /* padding: 0; */
+    /* width: 100%; */
+    height: 50vh;
+    /* padding-right: 50%;
+    padding-left: 50%;*/
+    /* background-color: red;*/
+   /* width: 1200px;  */
+   padding: 0px 10px;
+   width: 70%;
+   margin: auto;
+    /* height: 250px; */
+    /* margin: 12px ; */
+    /* background: url(/images/image1.jpg); */
+    animation: slide1 10s infinite;
+    background-repeat: no-repeat;
+  }
+  
+  @keyframes slide1 {
+    20%{
+      background: url(/images/image5.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+    }
+    40%{
+      background: url(/images/image4.jpg);
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+              
+    }
+    60%{
+        background: url(/images/image3.jpg);
+
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+            
+    }
+    80%{
+      background: url(/images/image2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+                
+    }
+    
+    100%{
+      background: url(/images/image1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+              
+    }
+  }
+
+
+
+  .slider-container1{
+    /* display: flex; */
+    justify-content: center;
+    /* border: 2px solid white; */
+    width: 90%;
+    margin: auto;
+  }
+.slider {
+    /* padding-right: 50%;
+    padding-left: 50%;*/
+    /* background-color: red;*/
+   /* width: 1200px;  */
+   padding: 0px 10px;
+   /* width: 70%; */
+   margin: auto;
+    /* height: 250px; */
+    /* margin: 12px ; */
+    /* background: url(/images/image1.jpg); */
+    animation: slide 10s infinite;
+    background-repeat: no-repeat;
+  }
+  
+  @keyframes slide {
+    20%{
+      background: url(/images/image1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+    }
+    40%{
+      background: url(/images/image2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+              
+    }
+    60%{
+        background: url(/images/image3.jpg);
+
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+            
+    }
+    80%{
+      background: url(/images/image4.jpg);
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+                
+    }
+    
+    100%{
+      background: url(/images/image5.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      
+
+              
+    }
+  }
+
+  .slider1 {
+    /* display: flex; */
+    justify-content: center;
+    /* border: 2px solid white; */
+    width: 100%;
+    margin: -100px auto;
+    animation: slide1 10s infinite;
+    background-repeat: no-repeat;
+  }
+  
+  @keyframes slide1 {
+    20%{
+      background: url(/images/image5.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+    }
+    40%{
+      background: url(/images/image4.jpg);
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+              
+    }
+    60%{
+        background: url(/images/image3.jpg);
+
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+            
+    }
+    80%{
+      background: url(/images/image2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+                
+    }
+    
+    100%{
+      background: url(/images/image1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+              
+    }
+  }
+
+
+
+
+
+   @media screen and (max-width: 400px) {
+
+    .header h1 {
+        font-size: 42px;
+    }
+
+    .home {
+    height: 100vh; 
+    width: 100%;
+    /* margin-top: 6pc; */
+    /* margin-bottom: 12pc; */
+    background-color: #1b2743;
+    background-image: url(/VR2.gif);
+
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    padding-top: 10%;
+    padding-top: 0%;
+    align-items: end;
+    justify-content: space-around;
+    animation: one 10s;
+    }
+    .projects-container  {
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+
+    }
+    .slider {
+        width: 100%;
+    }
+  }
+
+
+
+  @media screen and (min-width: 400px) {
+
+    .header h1 {
+        font-size: 48px;
+    }
+
+    .home {
+    height: 100vh; 
+    width: 100%;
+    /* margin-top: 6pc; */
+    /* margin-bottom: 12pc; */
+    background-color: #1b2743;
+    background-image: url(/VR2.gif);
+
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    padding-top: 10%;
+    padding-top: 0%;
+    align-items: end;
+    justify-content: space-around;
+    animation: one 10s;
+    }
+    .projects-container  {
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+
+    }
+    .slider {
+        width: 100%;
+    }
+  }
+
+
+  @media screen and (min-width: 600px) {
+
+    .header h1 {
+        font-size: 90px;
+    }
+
+    .home {
+    height: 100vh; 
+    width: 100%;
+    /* margin-top: 6pc; */
+    /* margin-bottom: 12pc; */
+    background-color: #1b2743;
+    background-image: url(/VR2.gif);
+
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    padding-top: 10%;
+    padding-top: 0%;
+    align-items: end;
+    justify-content: space-around;
+    animation: one 10s;
+    }
+    .projects-container  {
+        display: flex;
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+
+    }
+
+    .img {
+        display: flex;
+        padding:0px  20px;
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+    }
+    .slider {
+        width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+
+    .header h1 {
+        font-size: 100px;
+    }
+     p {
+        font-size: 28px;
+    }
+    .home {
+    height: 100vh; 
+    width: 100%;
+    /* margin-top: 6pc; */
+    /* margin-bottom: 12pc; */
+    background-color: #1b2743;
+    background-image: url(/VR2.gif);
+
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    padding-top: 10%;
+    padding-top: 0%;
+    align-items: end;
+    justify-content: space-around;
+    animation: one 10s;
+    }
+    .projects-container  {
+        display: flex;
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .img {
+        display: flex;
+        padding:20px  20px;
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    .img img{
+        display: flex;
+        padding:0px  20px;
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    .slider {
+        width: 100%;
+    }
+  }
+
+
+
+  @media screen and (min-width: 1024px) {
+
+    .header h1 {
+        font-size: 100px;
+        animation: second 3s;
+
+    }
+     p {
+        font-size: 28px;
+    animation: one 1s;
+
+
+    }
+    .home {
+    height: 100vh; 
+    width: 100%;
+    /* margin-top: 6pc; */
+    /* margin-bottom: 12pc; */
+    background-color: #1b2743;
+    background-image: url(/VR2.gif);
+
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    padding-top: 10%;
+    padding-top: 0%;
+    align-items: end;
+    justify-content: space-around;
+    animation: one 3s;
+
+
+    }
+
+
+    @keyframes one {
+        0% {
+            margin: -10px auto;
+
+        }
+        100% {
+        }
+        
+    }
+    @keyframes second {
+        0% {
+            margin: -300px auto;
+
+        }
+        100% {
+        }
+        
+    }
+    .projects-container  {
+        display: flex;
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+
+    }
+
+    .img {
+                display: flex;
+        padding:0px 70px;
+        /* /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    .img img{
+        display: flex;
+        /* padding:50px  20px; */
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        scale: 1.5;
+        margin: auto;
+    }
+    .slider {
+        width: 100%;
+    }
+
+  .slider-container{
+    display: flex;
+    justify-content: center;
+   margin: 25px;
+    
+    /* border: 2px solid white; */
+    width: 80%;
+    margin: auto;
+  }
+.slider {
+
+   padding: 0px 50px;
+   margin: 25px;
+
+   /* margin: auto; */
+
+    animation: slide 10s infinite;
+    background-repeat: no-repeat;
+  }
+
+  
+  @keyframes slide {
+    20%{
+      background: url(/images/image1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+    }
+    40%{
+      background: url(/images/image2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+              
+    }
+    60%{
+        background: url(/images/image3.jpg);
+
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+            
+    }
+    80%{
+      background: url(/images/image4.jpg);
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+                
+    }
+    
+    100%{
+      background: url(/images/image5.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      
+
+              
+    }
+  }
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (min-width: 1500px) {
+    .header h1 {
+        margin:20%;
+        font-size: 144px;
+        font-weight: 600;
+        color: transparent;
+        background: url(/images/image4.jpg);
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: moving 10s linear infinite;
+        padding-left: 0;
+        /* padding-right: 900m; */
+        /* animation: second 3s; */
+      }
+
+      
+      @keyframes moving {
+        from {
+          background-position: 0% 50%;
+        }
+        to {
+          background-position: 100% 100%;
+        }
+      }
+     p {
+        font-size: 28px;
+    animation: one 1s;
+
+
+    }
+    .home {
+    height: 100vh; 
+    width: 100%;
+    /* margin-top: 6pc; */
+    /* margin-bottom: 12pc; */
+    background-color: #1b2743;
+    background-image: url(/VR2.gif);
+
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    padding-top: 10%;
+    padding-top: 0%;
+    align-items: end;
+    justify-content: space-around;
+    animation: one 3s;
+
+
+    }
+
+
+    @keyframes one {
+        0% {
+            
+            margin: -300px auto;
+
+        }
+        100% {
+        }
+        
+    }
+    @keyframes second {
+        0% {
+
+        }
+        100% {
+        }
+        
+    }
+    .projects-container  {
+        display: flex;
+        /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+
+    }
+
+    .img {
+                display: flex;
+        padding:0px 70px;
+        /* /* width: 50%; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    .img img{
+        display: flex;
+        /* padding:50px  20px; */
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        scale: 1.5;
+        margin: auto;
+    }
+    .slider1 {
+        margin: 0px auto;
+    }
+
+  .slider-container{
+    display: flex;
+    justify-content: center;
+   margin: 25px;
+    
+    /* border: 2px solid white; */
+    width: 80%;
+    margin: auto;
+  }
+.slider {
+    width: 100%;
+
+   padding: 0px 50px;
+   margin: 25px;
+
+   /* margin: auto; */
+
+    animation: slide 10s infinite;
+    background-repeat: no-repeat;
+  }
+
+  
+  @keyframes slide {
+    20%{
+      background: url(/images/image1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+    }
+    40%{
+      background: url(/images/image2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+              
+    }
+    60%{
+        background: url(/images/image3.jpg);
+
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+            
+    }
+    80%{
+      background: url(/images/image4.jpg);
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+                
+    }
+    
+    100%{
+      background: url(/images/image5.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      
+
+              
+    }
+  }
+
+
+
+  }

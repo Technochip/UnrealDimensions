@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        html{
+          scroll-behavior: smooth;
+        }
+        body {
+          position: relative;
+          background-color: #1b2743;
+        }
+        
+        h1 {
+          margin:20%;
+          font-size: 80px;
+          font-weight: 600;
+          color: transparent;
+          background: url(images/image4.jpg);
+          background-clip: text;
+          -webkit-background-clip: text;
+          animation: moving 10s linear infinite;
+          padding-left: 0;
+          padding-right: 900m;
+        }
+        
+        @keyframes moving {
+          from {
+            background-position: 0% 50%;
+          }
+          to {
+            background-position: 100% 100%;
+          }
+        }
+        
+        .hero{
+            min-height: 100vh; 
+            width: 100%;
+            background-color: #1b2743;
+            background-image: url(VR2.gif);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: 70%;
+            padding: 0 8%;
+            align-items: end;
+            justify-content: space-between;
+        }
+        
+        .gif-container {
+          position: relative;
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+        }
+        
+        .gif-container img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 50%;
+          object-fit: cover;
+          transition: opacity 0.3s ease-in-out;
+        }
+        
+        .gif-container .hover-image {
+          opacity: 0;
+        }
+        
+        .gif-container:hover .hover-image {
+          opacity: 1;
+        }
+        
+        
+        
+        @media screen and (max-width: 768px) {
+            /* Adjustments for mobile view */
+            h1 {
+                font-size: 40px;
+                margin: 10% 5%;
+                padding-left: 0;
+                padding-right: 5%;
+            }
+            
+            .gif-container {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .slider {
+                padding: 0;
+                width: 100%;
+                height: 150px;
+            }
+            
+            /* Hide the sidebar initially on mobile view */
+            #mySidenav {
+                display: none;
+            }
+            
+            /* Show the sidebar when the hamburger icon is clicked */
+            #sidebar {
+                display: block;
+            }
+        }
+        
+        p {
+          text-align: left;
+          padding-left: 5%;
+          padding-right: 5%;
+          font-size: 20px;
+          color: violet;
+          border: 5cm solid ;
+          border-style:hidden;
+          letter-spacing: 1px;
+        }
+        
+        .slider {
+          padding-right: 50%;
+          padding-left: 50%;
+          width: 100px;
+          height: 250px;
+          margin: auto auto;
+          background: url(images/image1.jpg);
+          animation: slide 20s infinite;
+        }
+        
+        @keyframes slide {
+          20%{
+            background: url(images/image1.jpg);
+          }
+          40%{
+            background: url(images/image2.jpg);
+          }
+          60%{
+            background: url(images/image3.jpg);
+          }
+          80%{
+            background: url(images/image4.jpg);
+          }
+          100%{
+            background: url(images/image5.jpg);
+          }
+        }
+        .sidebar {
+          
+	        flex: 1 1 0;
+	        max-width: 300px;
+	        padding: 2rem 1rem;
+          position: fixed;
+          top: 0;
+          right: 0;
+	        background-color: #2e3047;
+        }
+
+        .sidebar h3 {
+	        color: #707793;
+	        font-size: 0.75rem;
+	        text-transform: uppercase;
+	        margin-bottom: 0.5em;
+        }
+
+        .sidebar .menu {
+	        margin: 0 -1rem;
+        }
+
+        .sidebar .menu .menu-item {
+	        display: block;
+	        padding: 1em;
+	        color: #FFF;
+	        text-decoration: none;
+	        transition: 0.2s linear;
+        }
+
+        .sidebar .menu .menu-item:hover,
+        .sidebar .menu .menu-item.is-active {
+	        color: #cc1bc6;
+	        border-right: 5px solid #cc1bc6;
+        }
+
+        .sidebar .menu .menu-item:hover {
+	        border-right: 5px solid #cc1bc6;
+        }
+
+        
+        .content {
+	        flex: 1 1 0;
+	        padding: 2rem;
+        }
+
+        .content h1 {
+	        color: #3C3F58;
+	        font-size: 2.5rem;
+	        margin-bottom: 1rem;
+        }
+
+        .content p {
+	        color: #707793;
+        }
+
+        @media (max-width: 1024px) {
+	        .sidebar {
+		        max-width: 200px;
+	        }
+        }
+
+        @media (max-width: 768px) {
+	        .menu-toggle {
+		        display: block;
+	        }
+	        .content {
+		        padding-top: 8rem;
+	        }
+	        .sidebar {
+                position: fixed;
+                top: 0;
+                left: 300px;
+                height: 100vh;
+                width: 100%;
+                max-width: 300px;
+                transition: 0.2s linear;
+	        }
+          
+
+	        .sidebar.is-active {
+		        left: 0;
+	        }
+        }               
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="gif-container">
+            <img src="coolimg.png" alt="Static Image">
+            <img src="Cool 2.gif" alt="Animated GIF" class="hover-image">
+        </div>
+        <h1>Unreal Dimensions</h1>
+
+        <div> 
+    </div>
+    <aside class="sidebar">
+        <h3>Menu</h3>
+        
+        <nav class="menu">
+            <a href="#" class="menu-item is-active">Home</a>
+            <a href="#" class="menu-item">About</a>
+            <a href="#" class="menu-item">Login</a>
+            <a href="#" class="menu-item">Signup</a>
+        </nav>
+
+    </aside>
+    <br>
+    <br>
+    <br>
+    
+    <p>Unreal Dimensions revolutionize social media by envisioning a fully interconnected virtual reality space, 
+      surpassing the limitations of traditional platforms, and unlocking endless possibilities for collaboration, creativity, and extraordinary experiences</p>
+    <br>
+    <br>
+    <div class="slider"></div>
+    <br>
+       
+   
+    
+</body>
+</html>
+    
+    
+    
+
+    
