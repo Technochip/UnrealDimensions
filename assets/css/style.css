@@ -41,6 +41,7 @@ html{
     display: inline;
     float: right;
     font-size: 18px;
+    position: relative;
   }
   
   .nav > .nav-links > a {
